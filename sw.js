@@ -1,7 +1,7 @@
 importScripts('js/sw-utils.js');
 
 
-const APP_CACHE = 'app-v1';
+const APP_CACHE = 'app-v2';
 const LIBS_CACHE = 'libs-v1';
 const DYNAMIC_CACHE = 'dynamic-v1';
 
