@@ -7,7 +7,7 @@ const DYNAMIC_CACHE = 'dynamic-v1';
 
 
 const APP_SHELL = [
-    '/',
+    // '/', // raiz solo para desarrollo no para live
     'index.html',
     'css/style.css',
     'img/favicon.ico',
