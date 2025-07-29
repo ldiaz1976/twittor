@@ -48,6 +48,15 @@ self.addEventListener('activate', e => {
             if (key !== APP_CACHE && key.includes("app")) {
                 return caches.delete(key);
             }
+
+            if (key !== LIBS_CACHE && key.includes("libs")) {
+                return caches.delete(key);
+            }
+
+            if (key !== DYNAMIC_CACHE && key.includes("dynamic")) {
+                return caches.delete(key);
+            }
+
         })
 
     });
