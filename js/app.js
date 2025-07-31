@@ -4,6 +4,23 @@ var url = window.location.href;
 
 var swLocation = "/twittor/sw.js";
 
+if (navigator.contacts) {
+    const props = ["name", "email", "tel", "address", "icon"];
+    const opts = { multiple: true };
+
+    try {
+        const contacts = await navigator.contacts.select(props, opts);
+        alert(contacts);
+        console.log(contacts);
+    } catch (ex) {
+        alert(ex);// Handle any errors here.
+        console.log(ex);// Handle any errors here.
+    }
+
+} else {
+    console.log("bye Contacts")
+}
+
 
 if (navigator.serviceWorker) {
 
