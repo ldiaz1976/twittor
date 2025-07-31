@@ -9,9 +9,10 @@ if (navigator.contacts) {
     const opts = { multiple: true };
 
     try {
-        const contacts = await navigator.contacts.select(props, opts);
-        alert(contacts);
-        console.log(contacts);
+        navigator.contacts.select(props, opts).then(contacts => {
+            alert(contacts);
+            console.log(contacts);
+        });
     } catch (ex) {
         alert(ex);// Handle any errors here.
         console.log(ex);// Handle any errors here.
